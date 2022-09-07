@@ -1,7 +1,7 @@
 /**
  * @name Chat Bubbles
  * @author Kaneko Qt#3682
- * @version 1.0.0
+ * @version 1.0.1
  * @description Message bubbles theme for Better Discord.
  * @source https://github.com/qt-kaneko/Chat-Bubbles
 */
@@ -147,6 +147,10 @@
 /*#endregion Quick-action buttons*/
 
 /*#region Images*/
+.imageWrapper-oMkQl4 {
+  border-radius: 4px;
+  overflow: hidden;
+}
 .imageContainer-10XenG + .altText-sAs-Ao { /* Hide image details */
   display: none;
 }
