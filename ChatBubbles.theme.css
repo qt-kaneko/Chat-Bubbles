@@ -1,0 +1,155 @@
+/**
+ * @name Chat Bubbles
+ * @author Kaneko Qt#3682
+ * @version 1.0.0
+ * @description Message bubbles theme for Better Discord.
+ * @source https://github.com/qt-kaneko/Chat-Bubbles
+*/
+
+/*#region Settings*/
+:root {
+  --cb-bubble-background: var(--background-secondary); /* Message bubble background */
+  --cb-bubble-corner-radius: 8px; /* Message bubble corner radius */
+
+  --cb-mentioned-indicator-width: 2px; /* Width of left indicator line in messages with mention */
+  --cb-replying-indicator-width: 2px; /* Width of left indicator line in message that you are replying */
+
+  --cb-hide-quick-action-buttons: none; /* Whether to show quick actions panel | none - hide, unset - show */
+  --cb-hide-replied-preview-avatar: none; /* Whether to show avatar in replied message preview | none - hide, unset - show */
+  --cb-hide-image-details: none; /* Whether to show image details in the end of message | none - hide, unset - show */
+}
+/*#endregion Settings*/
+
+/*#region Styles*/
+/*THIS IS THE THEME STYLES, DON'T EDIT THEM IF YOU DON'T KNOW WHAT YOU DO, THEME SETTINGS CAN BE FOUND ABOVE*/
+
+/*#region Message*/
+.message-2CShn3:not(.systemMessage-1H1Z20) {
+  background: var(--cb-bubble-background);
+  
+  margin-left: 4.5rem;
+  margin-top: .125rem;
+  margin-bottom: .125rem;
+  margin-right: 48px;
+
+  width: fit-content;
+  max-width: calc(100% - 9rem);
+
+  padding: 10px !important;
+  border-radius: var(--cb-bubble-corner-radius);
+}
+
+.avatar-2e8lTP,
+.timestampVisibleOnHover-9PEuZS { /* Fix avatar, timestamp position */
+  margin-left: -4.5rem;
+}
+/*#endregion Message*/
+
+/*#region Replied preview*/
+.repliedMessage-3Z6XBG {
+  padding: 2px;
+  
+  border-left: 2px solid;
+  border-radius: 2px;
+  padding-left: 6px;
+}
+
+.repliedMessage-3Z6XBG::before { /* Remove repled message "arrow" */
+  display: none;
+}
+
+.repliedMessage-3Z6XBG { /* Move replied text preview to next line */
+  flex-wrap: wrap;
+}
+.repliedTextPreview-1bvxun {
+  width: 100%;
+}
+
+.replyAvatar-sHd2sU { /* Hide reply avatar */
+  display: var(--cb-hide-replied-preview-avatar);
+}
+/*#endregion Replied preview*/
+
+/*#region Mentioned*/
+.mentioned-Tre-dv::before { /* Recreate mentioned style to have rounded corners */
+  display: none;
+}
+.mentioned-Tre-dv {
+  border-left: var(--cb-mentioned-indicator-width) solid var(--info-warning-foreground);
+}
+
+.mentioned-Tre-dv .avatar-2e8lTP { /* Fix avatar indent when mentioned */
+  margin-left: calc(-4.5rem - var(--cb-mentioned-indicator-width));
+}
+/*#endregion Mentioned*/
+
+/*#region Replying*/
+.replying-eZ7p5z::before { /* Recreate replying style to have rounded corners */
+  display: none;
+}
+.replying-eZ7p5z {
+  border-left: var(--brand-experiment) 2px solid;
+}
+
+.replying-eZ7p5z .avatar-2e8lTP { /* Fix avatar indent when replying */
+  margin-left: calc(-4.5rem - var(--cb-replying-indicator-width));
+}
+/*#endregion Replying*/
+
+/*#region Threads*/
+.container-3i3IzO {
+  background: var(--background-secondary-alt);
+}
+
+.hasThread-3h-KJV::after { /* Remove thread "arrow" */
+  display: none;
+}
+/*#endregion Threads*/
+
+/*#region Reactions*/
+.reaction-3vwAF2 { /* Add background to reactions */
+  background: var(--background-primary);
+  border-color: hsla(0,calc(var(--saturation-factor, 1)*0%),100%,.2);
+  margin-top: 5px;
+}
+.theme-light.reaction-3vwAF2 {
+  border-color: hsla(0,calc(var(--saturation-factor, 1)*0%),0%,.2);
+}
+/*#endregion Reactions*/
+
+/*#region Emoji*/
+.emojiContainer-2XKwXX {
+  margin-top: 3px;
+}
+/*#endregion Emoji*/
+
+/*#region Dividers*/
+.divider-IqmEqJ, .divider-2rZFJK { /* Fix dividers indents */
+  position: relative;
+  top: 0px !important;
+  margin: 17px 0px !important;
+}
+/*#endregion Dividers*/
+
+/*#region Alt-text*/
+.altText-sAs-Ao { /* Fix alt-text indents */
+  margin: 10px 0 0 0px;
+}
+.altText-sAs-Ao:empty {
+  display: none;
+}
+/*#endregion Alt-text*/
+
+/*#region Quick-action buttons*/
+.buttonContainer-1502pf {
+  display: var(--cb-hide-quick-action-buttons);
+}
+/*#endregion Quick-action buttons*/
+
+/*#region Images*/
+.imageContainer-10XenG + .altText-sAs-Ao { /* Hide image details */
+  display: none;
+}
+/*#endregion Images*/
+
+/*#endregion Styles*/
