@@ -1,7 +1,7 @@
 /**
  * @name Chat Bubbles
  * @author Kaneko Qt#3682
- * @version 1.0.1
+ * @version 1.0.2
  * @description Message bubbles theme for Better Discord.
  * @source https://github.com/qt-kaneko/Chat-Bubbles
 */
@@ -99,6 +99,7 @@
 /*#region Threads*/
 .container-3i3IzO {
   background: var(--background-secondary-alt);
+  width: -webkit-fill-available;
 }
 
 .hasThread-3h-KJV::after { /* Remove thread "arrow" */
