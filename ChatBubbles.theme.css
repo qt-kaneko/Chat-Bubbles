@@ -51,6 +51,10 @@
 .timestampVisibleOnHover-9PEuZS { /* Fix avatar, timestamp position */
   margin-left: -4.5rem;
 }
+
+.repliedMessage-3Z6XBG + .contents-2MsGLg > .avatar-2e8lTP {
+  margin-top: -40px;
+}
 /*#endregion Message*/
 
 /*#region Replied preview*/
