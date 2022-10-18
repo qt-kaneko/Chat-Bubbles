@@ -141,7 +141,12 @@
 
 /*#region Emoji*/
 .emojiContainer-2XKwXX {
-  margin-top: 3px;
+  width: fit-content;
+  height: fit-content;
+}
+.emoji {
+  width: 21px;
+  height: 21px;
 }
 /*#endregion Emoji*/
 
