@@ -133,6 +133,10 @@
 .reaction-3vwAF2 {
   margin-bottom: unset;
 }
+
+.reactionBtn-3I19bq { /* Fix add reaction button bottom margin */
+  margin-bottom: unset;
+}
 /*#endregion Reactions*/
 
 /*#region Emoji*/
@@ -164,6 +168,22 @@
 }
 /*#endregion Quick-action buttons*/
 
+/*#region Embeds*/
+.container-2sjPya { /* Add gaps between embeds */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.reaction-3vwAF2 { /* Fix reactions top margin */
+  margin-top: unset;
+}
+
+.reactions-3ryImn { /* Fix reactions position */
+  width: 100%;
+}
+/*#endregion Embeds*/
+
 /*#region Images*/
 .imageWrapper-oMkQl4 {
   border-radius: 4px;
@@ -171,16 +191,6 @@
 }
 .imageContainer-10XenG + .altText-sAs-Ao { /* Hide image details */
   display: none;
-}
-
-.container-2sjPya { /* Add gaps between images */
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.reactions-3ryImn { /* Fix reactions position */
-  width: 100%;
 }
 
 .imageWrapper-oMkQl4 { /* Make images same width */
