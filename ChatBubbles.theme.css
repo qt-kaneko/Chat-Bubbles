@@ -1,7 +1,7 @@
 /**
  * @name Chat Bubbles
  * @author Kaneko Qt#3682
- * @version 3.2
+ * @version 3.3
  * @description Message bubbles theme for Better Discord.
  * @source https://github.com/qt-kaneko/Chat-Bubbles
 */
@@ -48,12 +48,16 @@
 }
 
 .avatar-2e8lTP,
-.timestampVisibleOnHover-9PEuZS { /* Fix avatar, timestamp position */
+.avatarDecoration-34OC0G,
+.timestampVisibleOnHover-9PEuZS { /* Fix avatar, avatar decoration, timestamp position */
   margin-left: -4.5rem;
 }
 
 .repliedMessage-3Z6XBG + .contents-2MsGLg > .avatar-2e8lTP { /* Set avatar position near answer message */
   margin-top: -40px;
+}
+.repliedMessage-3Z6XBG + .contents-2MsGLg > .avatarDecoration-34OC0G { /* Set avatar decoration position near answer message */
+  margin-top: calc(-40px + -0.2rem);
 }
 /*#endregion Message*/
 
@@ -80,9 +84,17 @@
   max-width: calc(100% - 24px);
 }
 
-.replyAvatar-sHd2sU { /* Hide reply avatar */
+.replyAvatar-sHd2sU,
+.executedCommandAvatar-3oOnb1 { /* Hide reply avatar */
   display: var(--cb-hide-replied-preview-avatar);
 }
+
+.executedCommand-14-SNW { /* Fix replied "message with command" preview height */
+  height: unset;
+}
+
+/* TODO: Somehow fix replied "message with command" preview "used /blahblah" left margin */
+
 /*#endregion Replied preview*/
 
 /*#region Mentioned*/
