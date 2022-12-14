@@ -77,8 +77,12 @@
 .repliedMessage-3Z6XBG { /* Move replied text preview to next line */
   flex-wrap: wrap;
 }
-.repliedMessage-3Z6XBG > .repliedTextPreview-1bvxun { /* Move thumbnail image to text line */
-  width: calc(100% - 24px);
+.repliedMessage-3Z6XBG > .repliedTextPreview-1bvxun {
+  width: calc(100% - 24px); /* Preserve space for image thumbnail icon */
+}
+
+.repliedTextContent-2hOYMB { /* Fix add ... in the end of not fitting text */
+  display: unset;
 }
 
 .replyAvatar-sHd2sU,
