@@ -1,7 +1,7 @@
 /**
  * @name Chat Bubbles
  * @author Kaneko Qt#3682
- * @version 3.3
+ * @version 3.4
  * @description Message bubbles theme for Better Discord.
  * @source https://github.com/qt-kaneko/Chat-Bubbles
 */
@@ -77,11 +77,8 @@
 .repliedMessage-3Z6XBG { /* Move replied text preview to next line */
   flex-wrap: wrap;
 }
-.repliedMessage-3Z6XBG > .username-h_Y3Us {
-  width: 100%;
-}
 .repliedMessage-3Z6XBG > .repliedTextPreview-1bvxun { /* Move thumbnail image to text line */
-  max-width: calc(100% - 24px);
+  width: calc(100% - 24px);
 }
 
 .replyAvatar-sHd2sU,
@@ -237,7 +234,7 @@
   z-index: 1;
 
   position: absolute;
-  top: -2px;
+  top: 4px;
   right: -4px;
 
   background: var(--background-primary);
