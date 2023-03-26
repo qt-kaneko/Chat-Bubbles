@@ -1,18 +1,26 @@
 /**
  * @name Chat Bubbles
  * @author Kaneko Qt#3682
- * @version 3.5
+ * @version 3.6
  * @description Message bubbles theme for Better Discord.
  * @source https://github.com/qt-kaneko/Chat-Bubbles
 */
-/*
-  This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
-
-  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
-
-  You should have received a copy of the GNU General Public License along with this program. If not, see <https://www.gnu.org/licenses/>. 
-  Copyright 2022 Kaneko Qt
-*/
+/* Copyright 2023 Kaneko Qt
+ * This file is part of Chat Bubbles.
+ *
+ * Chat Bubbles is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Chat Bubbles is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Chat Bubbles. If not, see <https://www.gnu.org/licenses/>.
+ */
 
 /*#region Settings*/
 :root {
@@ -221,10 +229,12 @@
 .messageAttachment-CZp8Iv .imageWrapper-oMkQl4 { /* Make images same width */
   max-width: 350px !important;
 }
-.clickableWrapper-2WTAkL > img {
-  max-width: unset !important;
-  max-height: unset !important;
-}
+/* Removed due to cropped imaged in preview bug, idk for what it was needed
+ * .clickableWrapper-2WTAkL > img {
+ *   max-width: unset !important;
+ *   max-height: unset !important;
+ * }
+ */
 .messageAttachment-CZp8Iv {
   width: 100%;
 }
